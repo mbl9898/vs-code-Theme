@@ -10,10 +10,14 @@
         "support.function",
         "support.constant.handlebars",
         "source.powershell variable.other.member",
+        "entity.name.tag.css",
+        "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.id.css",
         "entity.name.operator.custom-literal" // See https://en.cppreference.com/w/cpp/language/user_literal
       ],
       "settings": {
-        "foreground": "#DCDCAA"
+        "foreground": "#F2C968"
+        // "foreground": "#DCDCAA"
       }
     },
     {
@@ -82,13 +86,14 @@
         "entity.name.operator"
       ],
       "settings": {
-        "foreground": "#C586C0"
+        "foreground": "#C678DD"
       }
     },
     {
       "name": "Variable and parameter name",
       "scope": [
         "variable",
+        "variable.other.object.property",
         "meta.definition.variable.name",
         "support.variable",
         "entity.name.variable"
@@ -97,9 +102,56 @@
         "foreground": "#9CDCFE"
       }
     },
+    // My Addition
+    {
+      "name": "Imported variable component josn-key",
+      "scope": [
+        "variable.other.readwrite.alias",
+        "variable.other.object",
+        "support.class.component",
+        "support.type.property-name.json",
+        "entity.name.tag.html",
+        "keyword.other.important.css",
+        "support.type.property-name.css",
+        "support.type.property-name.media.css"
+      ],
+      "settings": {
+        "foreground": "#E06C75"
+      }
+    },
+
+    {
+      "name": "Html props",
+      "scope": ["entity.other.attribute-name.html"],
+      "settings": {
+        "foreground": "#D19A66"
+      }
+    },
+    {
+      "name": "Qouted string",
+      "scope": [
+        "string.quoted.double",
+        "constant.numeric.css",
+        "keyword.other.unit.rem.css",
+        "keyword.other.unit.percentage.css",
+        "keyword.other.unit.percentage.css",
+        "keyword.other.unit.px.css",
+        "keyword.other.unit.vw.css",
+        "keyword.other.unit.vh.css",
+        "keyword.other.unit.em.css"
+      ],
+      "settings": {
+        "foreground": "#98C379"
+      }
+    },
+    // My Addition
     {
       "name": "Constants and enums",
-      "scope": ["variable.other.constant", "variable.other.enummember"],
+      "scope": [
+        "variable.other.constant",
+        "variable.other.enummember",
+        "text.html.derivative"
+      ],
       "settings": {
         "foreground": "#4FC1FF"
       }
@@ -177,7 +229,7 @@
       }
     },
     {
-      "scope": "entity.name.label",
+      "scope": ["entity.name.label", "punctuation.separator.key-value.html"],
       "settings": {
         "foreground": "#C8C8C8"
       }
@@ -185,7 +237,7 @@
   ],
   "semanticTokenColors": {
     "newOperator": "#C586C0",
-    "stringLiteral": "#ce9178",
+    "stringLiteral": "#98C379",
     "customLiteral": "#DCDCAA",
     "numberLiteral": "#b5cea8"
   }
